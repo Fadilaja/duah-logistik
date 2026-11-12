@@ -1,20 +1,86 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUAH Logistik</title>
-    
-    <!-- INI ADALAH KODE UNTUK CUSTOM LOGO DI URL (FAVICON) -->
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #ffffff; }
-        iframe { width: 100%; height: 100%; border: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logistik DUAH</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #f4f6f8;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Bagian Header (Foto & Nama) */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 10px 20px;
+      height: 60px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #38bdf8;
+    }
+    .brand h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    /* Area Iframe Apps Script */
+    .app-container {
+      flex: 1;
+      width: 100%;
+      height: calc(100vh - 60px);
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <!-- GANTI URL DI BAWAH DENGAN LINK WEB APP APPS SCRIPT ANDA -->
-    <iframe src="https://script.google.com/macros/s/AKfycbzNjKsyPWCJM16I7i4LaY2cfOacda-a68UvIwuQC-Zoa7MPfmOfbvH2mNUIaxjfvZhEiA/exec"></iframe>
+
+  <!-- BAGIAN ATUR FOTO & NAMA -->
+  <header class="navbar">
+    <div class="brand">
+      <!-- Ganti link gambar di bawah dengan link foto/logo Anda atau nama file foto di GitHub (misal: logo.png) -->
+      <img src="/logo.png" alt="Foto Profil">
+      <!-- Ganti teks di bawah dengan nama aplikasi atau perusahaan Anda -->
+      <h1>Aplikasi Logistik DUAH</h1>
+    </div>
+  </header>
+
+  <!-- BAGIAN IFRAME APPS SCRIPT -->
+  <main class="app-container">
+    <!-- Ganti atribut src di bawah dengan URL /exec Apps Script Anda yang bersih (tanpa /u/2/) -->
+    <iframe 
+      src="https://script.google.com/macros/s/AKfycbzNjKsyPWCJM16I7i4LaY2cfOacda-a68UvIwuQC-Zoa7MPfmOfbvH2mNUIaxjfvZhEiA/exec" 
+      allow="geolocation; microphone; camera">
+    </iframe>
+  </main>
+
 </body>
 </html>
